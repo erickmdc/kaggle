@@ -1,10 +1,12 @@
 {
-    "compilerOptions": {
-        "types": ["../../types.d.ts"],
-        "target": "ESNext",
-        "module": "NodeNext",
-        "skipLibCheck": true,
-        "strict": true,
-        "outDir": "../../dist-electron"
-    },
+  "compilerOptions": {
+    "types": [
+      "../../types.d.ts"
+    ],
+    "target": "ESNext",
+    "module": "NodeNext",
+    "skipLibCheck": true,
+    "strict": true,
+    "outDir": "../../dist-electron"
+  },
 }

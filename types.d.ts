@@ -12,7 +12,7 @@ type ProcessingEvent = {
 
 interface Window {
     electron: {
-        fetchData: () => Promise<any>;
+        fetchData: () => Promise<void>;
         subscribeRequestStatus: (callback: (eventData: ProcessingEvent) => void) => void;
         subscribeSubmitFormStatus: (callback: (eventData: number) => void) => void;
     }
