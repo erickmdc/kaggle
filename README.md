@@ -1,50 +1,12 @@
-# React + TypeScript + Vite
+# Kaggle Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small app to fetch data from Kaggle datasets & push the data to a Google Form.
 
-Currently, two official plugins are available:
+These are the steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Download file from [Kaggle](https://www.kaggle.com/datasets/thedevastator/us-baby-names-by-year-of-birth?select=babyNamesUSYOB-full.csv) containing the most common baby names per year.
+- Unzip file and process a chunk of the csv within (500 records).
+- Submit every record to a [Google Form](https://docs.google.com/forms/d/12GWPdXfuN8lI1bxu8WB8QrZmUtHs2fHqm2dbZkJtul4/edit) previously created.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## About Playwright Testing
+I've been trying to implement this entire process in a sigle test using Playwright, but I'm failing in step 1. Every time I try to download the file from Kaggle the page redirects to login again. I'm going to keep looking for a way to solve this, but for now I can't get the Playwright requirement right.
