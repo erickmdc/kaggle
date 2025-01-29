@@ -10,3 +10,10 @@ These are the steps:
 
 ## About Playwright Testing
 I've been trying to implement this entire process in a sigle test using Playwright, but I'm failing in step 1. Every time I try to download the file from Kaggle the page redirects to login again. I'm going to keep looking for a way to solve this, but for now I can't get the Playwright requirement right.
+
+## Notes about CLI commands
+- npm run dev to run all locally
+
+- npm dist:win to create an .exe for windows (this is the only one I tested, since I have a windows machine)
+- npm dist:mac to create a .dmg for mac
+- npm dist:linux to create an AppImage for linux
